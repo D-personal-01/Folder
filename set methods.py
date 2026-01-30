@@ -5,14 +5,13 @@ ch = 0
 
 while ch != 12:
     print("""Set Methods:
-            1. isdisjoint                             2. issuperset
-            3. issubset                              4. add
-            5. remove                                6. discard
-            7. delete set                           8. clear set
-            9. in keyword                          10. pop
+            1. isdisjoint                         2. issuperset
+            3. issubset                           4. add
+            5. remove                             6. discard
+            7. delete set                         8. clear set
+            9. in keyword                         10. pop
             11. display sets                      12. exit
             """)
-
     ch = int(input("Enter choice: "))
 
     if ch == 1:
