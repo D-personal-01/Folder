@@ -2,20 +2,41 @@ set1 = set(map(int, input("Enter set 1 elements separated by space: ").split()))
 set2 = set(map(int, input("Enter set 2 elements separated by space: ").split()))
 
 def union(s1,s2):
-    s1.update(s2)
-    return s1
+    try:
+        s1.update(s2)
+        return s1
+    except:
+        print("Error in union operation")
+    finally:
+        print("Operation completed.")
 
 def insec(s1,s2):
-    s1.intersection_update(s2)
-    return s1
+    try:
+        s1.intersection_update(s2)
+        return s1
+    except:
+        print("Error in intersection operation")
+    finally:
+        print("Operation completed.")
     
 def diff(s1,s2):
-    s1.difference_update(s2)
-    return s1
+    try:
+        s1.difference_update(s2)
+        return s1
+    except:
+        print("Error in difference operation")
+    finally:
+        print("Operation completed.")
     
 def sdiff(s1,s2):
-    s1.symmetric_difference_update(s2)
-    return s1
+    try:
+        s1.symmetric_difference_update(s2)
+        return s1
+    except:
+        print("Error in symmetric difference operation")
+    finally:
+        print("Operation completed.")
+
 
 ch=0
 
