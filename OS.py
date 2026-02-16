@@ -38,3 +38,6 @@ print(fols)
 
 for fol in fols:
         print(fol)
+
+for fol in fols:
+        print(os.listdir(f"data/{fol}"))

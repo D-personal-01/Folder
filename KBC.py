@@ -71,15 +71,12 @@ for i, q in enumerate(questions):
             wrong = [o for o in ["a", "b", "c", "d"] if o != correct]
             removed = random.sample(wrong, 2)
             print("Remaining options:", correct, removed[0])
-
         elif ll == "audience" and lifelines["audience"]:
             lifelines["audience"] = False
             print("Audience poll suggests option:", q["answer"])
-
         elif ll == "expert" and lifelines["expert"]:
             lifelines["expert"] = False
             print("Expert suggests option:", q["answer"])
-
         else:
             print("Lifeline not available.")
 
