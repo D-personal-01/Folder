@@ -4,8 +4,8 @@ def create():
     f=open("stud.dat","ab")
 
     roll=int(input("Enter roll number: "))
-    CGP=float(input("Enter CGP: "))
-    pickle.dump([roll,CGP],f)
+    CGPA=float(input("Enter CGPA: "))
+    pickle.dump([roll,CGPA],f)
     
     f.close()
 
@@ -18,7 +18,7 @@ def display():
     try:
         while 1:
             s=pickle.load(f)
-            print(f"\nRoll:{s[0]}\nCGP:{s[1]}\n")
+            print(f"\nRoll:{s[0]}\nCGPA:{s[1]}\n")
     except EOFError:
         pass
     
@@ -31,7 +31,7 @@ def search():
         while 1:
             s=pickle.load(f)
             if s[0]==roll:
-                print(f"\nRoll:{s[0]}\nCGP:{s[1]}\n")
+                print(f"\nRoll:{s[0]}\nCGPA:{s[1]}\n")
                 f.close()
                 return[s[0],s[1]]
     except EOFError:
@@ -39,7 +39,7 @@ def search():
         f.close()
 
     
-#Update CGP
+#Update CGPA
 def update():
     f=open("stud.dat","rb+")
 
@@ -50,10 +50,10 @@ def update():
             pos=f.tell()
             s=pickle.load(f)
             if s[0]==roll:
-                print(f"\nRoll: {s[0]}\nCGP: {s[1]}\n")
-                cgp=float(input("Enter the new CGP: "))
+                print(f"\nRoll: {s[0]}\nCGPA: {s[1]}\n")
+                CGPA=float(input("Enter the new CGPA: "))
                 f.seek(pos)
-                s[1]=cgp
+                s[1]=CGPA
                 pickle.dump(s,f)
                 print("Record saved.")
                 break
