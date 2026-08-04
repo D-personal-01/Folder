@@ -2,6 +2,11 @@ class bankaccount:
     Bank_balance=0
     pin=None
     # Static method is used to access the class variables without creating an instance of the class.
+    def __init__(self):
+        a=int(input("Enter your bank balance: "))
+        b=int(input("Enter your pin: "))
+        self.set_pin(b)
+        self.initial_bb(a)
     @staticmethod
     def set_pin(new_pin):
         if len(str(new_pin))==6:
@@ -18,9 +23,4 @@ class bankaccount:
             print("Initial bank balance cannot be less than 30000")
 
 a=bankaccount()
-a.set_pin(000)
-a.set_pin(192837)
-a.initial_bb(-2000)
-a.initial_bb(0)
-a.initial_bb(2000)
-a.initial_bb(99999999999.99)
+
