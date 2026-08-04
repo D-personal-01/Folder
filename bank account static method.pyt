@@ -20,5 +20,7 @@ class bankaccount:
 a=bankaccount()
 a.set_pin(000)
 a.set_pin(192837)
-
+a.initial_bb(-2000)
+a.initial_bb(0)
+a.initial_bb(2000)
 a.initial_bb(99999999999.99)
