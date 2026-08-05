@@ -23,4 +23,3 @@ class bankaccount:
             print("Initial bank balance cannot be less than 30000")
 
 a=bankaccount()
-
