@@ -7,3 +7,6 @@ class person:
         print("Hello my name is " + self.name)
 
 print(help(person))
+
+p=person("Alice", 30)
+print(help(p))
