@@ -38,4 +38,3 @@ print()
 print(dir(tuple))
 print()
 print(dir(dict))
-
