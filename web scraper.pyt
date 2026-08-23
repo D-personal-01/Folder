@@ -1,10 +1,26 @@
 import requests
 from bs4 import BeautifulSoup
-url=input("Enter the URL of the website you want to scrape: ")
-response = requests.get(url)
-soup = BeautifulSoup(response.text, 'html.parser')
-print(soup.title) # <title>UCI Machine Learning Repository: Data Sets</title>
-print(soup.title.get_text()) # UCI Machine Learning Repository: Data Sets
-print(soup.body) # gives the whole page on the website
-print(response.status_code)
 
+url = "https://archive.ics.uci.edu/dataset/2/adult"
+
+# 1. Get the webpage
+response = requests.get(url)
+
+# 2. Check whether the request worked
+print("Status:", response.status_code)
+
+# 3. Convert HTML into a BeautifulSoup object
+soup = BeautifulSoup(response.text, "html.parser")
+
+# 4. Get the page title
+print("Title:", soup.title.get_text(strip=True))
+
+# 5. Find all links on the page
+links = soup.find_all("a")
+
+for link in links:
+    text = link.get_text(strip=True)
+    href = link.get("href")
+
+    if text:
+        print(text, "->", href)
