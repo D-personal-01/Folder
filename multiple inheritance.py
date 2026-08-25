@@ -32,3 +32,4 @@ class player(employee, sports_player):
 A= player("John Doe", 123, "Warriors", "Basketball")
 A.display()
 A.display_sport()
+print(player.mro())
