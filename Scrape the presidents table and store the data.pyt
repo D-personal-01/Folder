@@ -23,7 +23,7 @@ for row in table.find_all("tr"):
    
     cells = row.find_all(["th", "td"])
     row_data = [cell.get_text(strip=True) for cell in cells]
-    if row_data:  # Skip empty rows
+    if row_data:
         data.append(row_data)
 
 output_file = 'presidents.json'
