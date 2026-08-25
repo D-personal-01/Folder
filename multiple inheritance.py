@@ -16,6 +16,7 @@ class sports_player:
     def display(self):
         print(f"Team: {self.team}, Sport: {self.sport}")
 
+#Employee method will dominate if the name of method is the same in both parent classes
 
 class player(employee, sports_player):
     def __init__(self, name, id, team, sport):
