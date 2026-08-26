@@ -1,0 +1,5 @@
+hr_wage=int(input("Enter the hourly wage: "))
+regular_hours=int(input("Enter the regular hours worked: "))
+overtime_hours=int(input("Enter the overtime hours worked: "))
+print(f"Regular pay: ${hr_wage * regular_hours:.2f}")
+print(f"Overtime pay: ${hr_wage * overtime_hours * 1.5:.2f}")
